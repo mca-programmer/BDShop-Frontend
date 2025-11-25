@@ -44,7 +44,7 @@ export default function Testimonials() {
         </h2>
 
         {/* Marquee Wrapper */}
-        <div className="overflow-hidden relative">
+        <div className="overflow-hidden relative w-full">
           <div className="flex animate-marquee space-x-8">
             {[...testimonials, ...testimonials].map((testi, index) => (
               <motion.div
@@ -74,14 +74,15 @@ export default function Testimonials() {
         <style jsx>{`
           @keyframes marquee {
             0% {
-              transform: translateX(-100%);
+              transform: translateX(-50%);
             }
             100% {
-              transform: translateX(100%);
+              transform: translateX(0%);
             }
           }
           .animate-marquee {
             display: flex;
+            width: max-content;
             animation: marquee 20s linear infinite;
           }
         `}</style>
