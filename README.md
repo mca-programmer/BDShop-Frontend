@@ -6,7 +6,7 @@ User authentication, product management, search features, and a fully responsive
 
 ---
 https://i.postimg.cc/qvfxYr1b/bdshop-hero-section.png
-
+![Auth Shop Screenshot](https://i.postimg.cc/3r4Q49jX/Screenshot-2025-11-25-171652.png)
 ## 🚀 Live Demo
 
 ### 🔹 Frontend (Live)
@@ -134,4 +134,5 @@ git clone https://github.com/mca-programmer/BDShop-Frontend.git
 cd BDShop-Frontend
 npm install
 npm run dev
+
 
