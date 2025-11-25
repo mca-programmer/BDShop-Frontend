@@ -5,7 +5,7 @@ A complete full-stack e-commerce application built with **Next.js (App Router)**
 User authentication, product management, search features, and a fully responsive, polished UI are included.
 
 ---
-[![bdshop-hero1.png](https://i.postimg.cc/V6ygCbhn/bdshop-hero1.png)](https://postimg.cc/bGT1Xdpw)
+[![bdshop-hero-section.png](https://i.postimg.cc/gjhn6nf3/bdshop-hero-section.png)](https://postimg.cc/gLYYCkc0)
 ## 🚀 Live Demo
 
 ### 🔹 Frontend (Live)
@@ -133,6 +133,7 @@ git clone https://github.com/mca-programmer/BDShop-Frontend.git
 cd BDShop-Frontend
 npm install
 npm run dev
+
 
 
 
