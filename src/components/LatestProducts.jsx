@@ -7,7 +7,7 @@ export default function LatestProduct() {
   const [productList, setProductList] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://bd-shop-backend.vercel.app/products")
       .then((res) => res.json())
       .then((data) => setProductList(data))
       .catch((err) => console.error("Failed to fetch products:", err));

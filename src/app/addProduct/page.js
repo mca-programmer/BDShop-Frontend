@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 import { useRouter } from "next/navigation";
 
 export default function ProductsPage() {
-  const { user } = useContext(AuthContext); 
+  const { user } = useContext(AuthContext);
   const router = useRouter();
 
   const handleSubmit = (e) => {
@@ -31,7 +31,7 @@ export default function ProductsPage() {
     data.email = user.email;
 
     axios
-      .post("http://localhost:5000/products", data)
+      .post("https://bd-shop-backend.vercel.app/products", data)
       .then((res) => {
         Swal.fire({
           title: "Success!",
@@ -61,7 +61,10 @@ export default function ProductsPage() {
         Add Product
       </h1>
 
-      <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <form
+        onSubmit={handleSubmit}
+        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+      >
         {/* Title */}
         <div className="col-span-1 md:col-span-2">
           <label className="block mb-1 font-medium">Title</label>

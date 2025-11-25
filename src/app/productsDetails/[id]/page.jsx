@@ -25,7 +25,7 @@ export default function ProductsDetails() {
   useEffect(() => {
     if (!id) return;
 
-    fetch(`http://localhost:5000/productsDetails/${id}`)
+    fetch(`https://bd-shop-backend.vercel.app/productsDetails/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
@@ -64,7 +64,10 @@ export default function ProductsDetails() {
     };
 
     try {
-      const res = await axios.post("http://localhost:5000/imports", importData);
+      const res = await axios.post(
+        "https://bd-shop-backend.vercel.app/imports",
+        importData
+      );
       console.log("POST response:", res.data);
 
       Swal.fire({

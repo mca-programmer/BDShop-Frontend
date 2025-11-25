@@ -16,7 +16,7 @@ export default function MyProduct() {
     const fetchProducts = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/myProducts/${user.email}`
+          `https://bd-shop-backend.vercel.app/myProducts/${user.email}`
         );
         setProducts(res.data);
       } catch (err) {

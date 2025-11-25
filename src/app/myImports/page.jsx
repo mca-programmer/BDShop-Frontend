@@ -20,7 +20,9 @@ export default function MyImports() {
 
   const fetchImports = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/myImports");
+      const res = await axios.get(
+        "https://bd-shop-backend.vercel.app/myImports"
+      );
       setImports(res.data);
       setLoadingData(false);
     } catch (error) {
@@ -41,7 +43,9 @@ export default function MyImports() {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(`http://localhost:5000/deleteImportProduct/${id}`);
+          await axios.delete(
+            `https://bd-shop-backend.vercel.app/deleteImportProduct/${id}`
+          );
           setImports(imports.filter((item) => item._id !== id));
           Swal.fire("Deleted!", "Your import has been deleted.", "success");
         } catch (error) {
@@ -105,7 +109,7 @@ export default function MyImports() {
                 </td>
                 <td className="px-4 py-2 flex flex-wrap gap-2">
                   <Link
-                    href={`/productsDetails/${item.productId}`} // <--  productId 
+                    href={`/productsDetails/${item.productId}`} // <--  productId
                     className="flex items-center gap-1 px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700"
                   >
                     <FaInfoCircle /> Details

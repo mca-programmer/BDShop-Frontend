@@ -11,7 +11,7 @@ export default function AllProducts() {
 
   // Fetch all products
   useEffect(() => {
-    fetch("http://localhost:5000/allProducts")
+    fetch("https://bd-shop-backend.vercel.app/allProducts")
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .catch((err) => console.error(err));
@@ -31,7 +31,9 @@ export default function AllProducts() {
 
     if (result.isConfirmed) {
       try {
-        await axios.delete(`http://localhost:5000/deleteImportProduct/${_id}`);
+        await axios.delete(
+          `https://bd-shop-backend.vercel.app/deleteImportProduct/${_id}`
+        );
         Swal.fire("Deleted!", "Product has been deleted.", "success");
 
         // Remove from UI
@@ -73,7 +75,9 @@ export default function AllProducts() {
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
 
-                <p className="text-sm font-medium text-pink-600 mb-2">{category}</p>
+                <p className="text-sm font-medium text-pink-600 mb-2">
+                  {category}
+                </p>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
                   {title}
                 </h3>
@@ -83,7 +87,9 @@ export default function AllProducts() {
                 </p>
 
                 <div className="flex items-center justify-between w-full px-2 mb-4">
-                  <span className="text-pink-600 font-bold text-lg">${price || 0}</span>
+                  <span className="text-pink-600 font-bold text-lg">
+                    ${price || 0}
+                  </span>
                   <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">
                     {priority || "Normal"}
                   </span>
